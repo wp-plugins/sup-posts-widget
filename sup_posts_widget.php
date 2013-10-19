@@ -11,7 +11,6 @@ License: GPLv2 or later
 */
 
 require_once dirname( __FILE__ ) . '/widget.php';
-require_once dirname( __FILE__ ) . '/settings.php';
 
 function spw_plugin_scripts(){
 
