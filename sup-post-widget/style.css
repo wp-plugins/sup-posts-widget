@@ -1,0 +1,156 @@
+/* Style for Sup Posts Widget 
+========================================== */
+div.spw_widget div.spw_content {
+	clear:both;
+	display:block;
+	overflow:hidden;
+}
+
+div.TabView  div.spw_tabs {
+height: 30px;
+overflow: hidden;
+}
+
+div.TabView  div.spw_tabs a {
+	float: left;
+	display: block;
+	width: 30%;
+	height: 30px;
+	padding-top: 7px;
+	MARGIN: 0 2PX 0 0;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	background: #eaeaea;
+	border: 1px solid #ccc;
+}
+
+div.TabView div.spw_tabs a:hover {background: #F3F3F3;}
+div.TabView div.spw_tabs a.Active {background: #FFF;}
+
+
+.spw_content ul {
+	margin:0;
+	padding:0;
+}
+
+.spw_content ul li{
+	margin: 10px 0 0 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	line-height: 1.2em;
+}
+.spw_content ul li img {
+	margin: 0 8px 0 0;
+	padding: 0;
+	width: 75px;
+	height: 65px;
+	float: left;
+}
+
+
+/* Admin Style
+========================================================= */
+#reminder {
+	clear: both;
+	display: none;
+	font-weight: bold;
+	font-size: 0.9em;
+	color: #ff0000;
+	padding-top: 10px;
+	width: 340px;
+}
+
+#to_wrapper {
+	width: 785px;
+	background: url(wrapper.gif) repeat-y 0 0;
+}
+	#to_wrapper .b1 { background: url(header.gif) no-repeat 0 0; }
+	#to_wrapper .b2 { background: url(footer.gif) no-repeat 0 bottom; }
+#to_header {
+	height: 83px;
+}
+	#to_header h2 {
+		padding: 32px 0 0 20px;
+		color: #464646;
+		font-family: "Arial";
+		font-weight: normal;
+		font-size: 23px;
+		text-shadow: 0 1px 0 #FFFFFF;
+	}
+#to_sidebar {
+	padding-left: 1px;
+	width: 160px;
+	float: left;
+}
+	#to_sidebar ul {
+		
+	}
+		#to_sidebar ul li {
+			border-bottom: 1px solid #D8D8D8;
+			font-family: "Georgia", "Serif";
+			margin-bottom: 0;
+		}
+		#to_sidebar ul li a {
+			text-decoration: none;
+			display: block;
+			padding: 10px 15px;
+			color: #797979;
+		}
+		#to_sidebar ul li a:hover {
+			background-color: #ffffff;
+		}
+		#to_sidebar ul li.active a {
+			color: #21759B;
+			background-color: #ffffff;
+		}
+#to_content {
+	width: 594px;
+	float: right;
+	padding: 15px;
+}
+
+.itemset {
+	display: none;
+}
+	.itemset h3 {
+		clear: both;
+		border-bottom: 1px solid #E7E7E7;
+		padding: 40px 0 10px;
+		margin: 0 0 10px;
+	}
+	.itemset h3.f { padding-top: 0; }
+	.itemset .field {
+		float: left;
+		padding-right: 20px;
+	}
+		.itemset input.text, .itemset textarea, .itemset select {
+			background-color: #F1F1F1;
+			padding: 5px;
+			font-size: 12px;
+			border-color: #cccccc #e6e6e6 #e6e6e6 #cccccc;
+			font-family: "Lucida Grande","Lucida Sans Unicode", "Arial", "Verdana", "sans-serif";
+		}
+		.itemset input.text, .itemset textarea { width: 340px; }
+		.itemset textarea { height: 150px; }
+	.itemset .note {
+		font-size: 11px;
+		font-family: Arial;
+		color: #999999;
+	}
+#to_footer {
+	clear: both;
+	height: 47px;
+	position: relative;
+}
+	#save {
+		width: 122px; height: 25px;
+		text-indent: -9999px;
+		outline: none;
+		border: 0;
+		background: url(save.gif) no-repeat 0 0;
+		border-radius: 0;
+		position: absolute;
+		top: 10px; left: 650px;
+	}
