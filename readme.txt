@@ -41,6 +41,9 @@ A : You can use the short code to add a list popular, random or latest post to t
 
 == Screenshots ==
 
+1. Post Widget form in the sidebar
+2. Post Widget form in the Page/Post
+
 == Changelog ==
 
 = 0.1 =
