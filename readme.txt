@@ -12,13 +12,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 
 Is a plugin where you can display the number of popular posts, latest and random post with thumbnail image on your sidebar or page/post using short code.
-
-Feature :
-- Random post, Popular Posts and Latest posts
-- Thumbnail image, support 3rdparty source image
-- Widget ready
-- Short code support
-- Tabview menu with jQuery
+<br/>
+<b>Feature :</b><br/>
+- Random post, Popular Posts and Latest posts<br/>
+- Thumbnail image, support 3rdparty source image<br/>
+- Widget ready<br/>
+- Short code support<br/>
+- Tabview menu with jQuery<br/>
 
 == Installation ==
 
@@ -33,7 +33,7 @@ Q : How can I add a list of posts widget to my sidebar?
 A : Go to the Appearance -> Widgets ->  Choose a "Posts Widget" and drag it to the sidebar where you wish it to appear.
 
 Q : How can I add a list of posts widget to my page or post?
-A : You can use the short code to add a list popular, random or latest post to the page/post.
+A : You can use the short code to add a list popular, random or latest post to the page/post.<br/>
     Manual widget code : <code>&lt;?php echo spw_display(&#39;&#39;); ?&gt;</code>
 
     Individual selection Use short codes below to your post/page:
