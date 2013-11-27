@@ -36,7 +36,7 @@ Q : How can I add a list of posts widget to my page or post?
 A : You can use the short code to add a list popular, random or latest post to the page/post.<br/>
     Manual widget code : <code>&lt;?php echo spw_display(&#39;&#39;); ?&gt;</code>
 
-    Individual selection Use short codes below to your post/page:
+    Individual selection Use short codes below to your post/page :
 	Popular post   :  [sup_popular]
 	Latest post    :  [sup_latest]
 	Random post    :  [sup_random]
