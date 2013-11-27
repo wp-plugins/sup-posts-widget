@@ -4,7 +4,7 @@
 Plugin Name: Sup Posts Widget
 Plugin URI: http://theusup.com
 Description: Is a plugin where you can display the number of <strong>popular posts, latest and random post</strong> with thumbnail image on your sidebar or page/post. This plugin support for 3rdparty source image. 
-Version: 1.1
+Version: 1.2
 Author: Usupdotnet
 Author URI: http://u-sup.blogspot.com/
 License: GPLv2 or later
