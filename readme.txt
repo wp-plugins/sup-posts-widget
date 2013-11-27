@@ -1,6 +1,6 @@
 === Sup Post Widget ===
 Contributors: Usupdotnet
-Donate link:  
+Donate link: http://dev.templatemaxs.com/p/donate.html
 Tags: posts widget, posts, popular, latest, random
 Requires at least: 2.8
 Tested up to: 3.4
