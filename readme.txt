@@ -100,6 +100,7 @@ A : You can use the short code to add a list popular, random or latest post to t
 == Changelog ==
 
 = 0.1 =
+* Initial release
 
 = 1.1 =
-* Initial release>>>>>>> .r811288
+* Fixed little bug on widget
