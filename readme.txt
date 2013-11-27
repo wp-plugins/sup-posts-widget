@@ -53,5 +53,9 @@ A : You can use the short code to add a list popular, random or latest post to t
 * Initial release
 
 = 1.1 =
+* Fixed little bug on widget
+
+= 1.2 =
+* Fixed little bug on style class
 
 * Fixed littel bux on widget
