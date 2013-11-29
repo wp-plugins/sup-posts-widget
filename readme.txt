@@ -57,3 +57,6 @@ A : You can use the short code to add a list popular, random or latest post to t
 
 = 1.2 =
 * Fixed little bug on style class
+
+= 1.3 =
+* Added new style
