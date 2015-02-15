@@ -4,7 +4,7 @@
 Plugin Name: Sup Posts Widget
 Plugin URI: http://uspdev.net/sup-post-widget-wordpress-plugin/
 Description: Is a plugin where you can display the number of <strong>popular posts, latest and random post</strong> with thumbnail image on your sidebar or page/post. This plugin support for 3rdparty source image. 
-Version: 1.4
+Version: 1.5
 Author: Uspdev
 Author URI: http://uspdev.net
 License: GPLv2 or later
