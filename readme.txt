@@ -1,10 +1,10 @@
 === Sup Post Widget ===
-Contributors: Usupdotnet
-Donate link: http://dev.templatemaxs.com/p/donate.html
+Contributors: Uspdev
+Donate link: http://uspdev.net/donate-to-uspdev/
 Tags: posts widget, posts, popular, latest, random
 Requires at least: 2.8
-Tested up to: 4.1
-Stable tag: 0.4.1
+Tested up to: 4.2
+Stable tag: 0.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,3 +60,13 @@ A : You can use the short code to add a list popular, random or latest post to t
 
 = 1.3 =
 * Added new style
+
+= 1.4 =
+
+= 1.5 =
+
+= 1.6 =
+
+= 1.7 =
+* Added post widgets options
+* Default image if no thumbnail

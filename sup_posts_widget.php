@@ -4,13 +4,14 @@
 Plugin Name: Sup Posts Widget
 Plugin URI: http://uspdev.net/sup-post-widget-wordpress-plugin/
 Description: Is a plugin where you can display the number of <strong>popular posts, latest and random post</strong> with thumbnail image on your sidebar or page/post. This plugin support for 3rdparty source image. 
-Version: 1.6
+Version: 1.7
 Author: Uspdev
 Author URI: http://uspdev.net
 License: GPLv2 or later
 */
 
 require_once dirname( __FILE__ ) . '/widget.php';
+require_once dirname( __FILE__ ) . '/spw-settings.php';
 
 function spw_plugin_scripts(){
 
@@ -64,8 +65,13 @@ echo '<div class="spw_content" style="width:100%;height:300px">';
 		query_posts('posts_per_page=5&orderby=comment_count');
 			if (have_posts()) :
  		while (have_posts()) : the_post(); ?>
-			  <li><?php sup_post_image('1'); ?>
- 			    <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			  <li>
+		<?php if ( has_post_thumbnail() ) { ?>
+			<a href="<?php the_permalink(); ?>"><?php sup_post_image('1'); ?></a>
+		<?php } else { ?>
+			<?php echo '<a href="<?php the_permalink(); ?>"><img src="' . plugins_url( '/img/nopreview.png', __FILE__ ) . '" alt="no preview"/></a>'; ?>
+		<?php } ?>
+ 			 <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			  </li> 
 
  		<?php endwhile;
@@ -82,7 +88,12 @@ echo '<div class="spw_content" style="width:100%;height:300px">';
 		query_posts('posts_per_page=5&orderby=latest');
 			if (have_posts()) :
  		while (have_posts()) : the_post(); ?>
-			  <li><?php sup_post_image('1'); ?>
+			  <li>
+		<?php if ( has_post_thumbnail() ) { ?>
+			<a href="<?php the_permalink(); ?>"><?php sup_post_image('1'); ?></a>
+		<?php } else { ?>
+			<?php echo '<a href="<?php the_permalink(); ?>"><img src="' . plugins_url( '/img/nopreview.png', __FILE__ ) . '" alt="no preview"/></a>'; ?>
+		<?php } ?>
  			    <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			  </li> 
 
@@ -100,7 +111,12 @@ echo '<div class="spw_content"  style="width:100%;height:300px">';
 		query_posts('posts_per_page=5&orderby=rand');
 			if (have_posts()) :
  		while (have_posts()) : the_post(); ?>
-			  <li><?php sup_post_image('1'); ?>
+			  <li>
+		<?php if ( has_post_thumbnail() ) { ?>
+			<a href="<?php the_permalink(); ?>"><?php sup_post_image('1'); ?></a>
+		<?php } else { ?>
+			<?php echo '<a href="<?php the_permalink(); ?>"><img src="' . plugins_url( '/img/nopreview.png', __FILE__ ) . '" alt="no preview"/></a>'; ?>
+		<?php } ?>
  			    <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			  </li> 
 
@@ -128,7 +144,12 @@ function sup_popular_posts() {
 		query_posts('posts_per_page=10&orderby=comment_count');
 			if (have_posts()) :
  		while (have_posts()) : the_post(); ?>
-			  <li style="width:49%"><?php sup_post_image('1'); ?>
+			  <li style="width:49%">
+		<?php if ( has_post_thumbnail() ) { ?>
+			<a href="<?php the_permalink(); ?>"><?php sup_post_image('1'); ?></a>
+		<?php } else { ?>
+			<?php echo '<a href="<?php the_permalink(); ?>"><img src="' . plugins_url( '/img/nopreview.png', __FILE__ ) . '" alt="no preview"/></a>'; ?>
+		<?php } ?>
  			    <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			  </li> 
 
@@ -149,7 +170,12 @@ function sup_latest_posts() {
 		query_posts('posts_per_page=10&orderby=date');
 			if (have_posts()) :
  		while (have_posts()) : the_post(); ?>
-			  <li style="width:49%"><?php sup_post_image('1'); ?>
+			  <li style="width:49%">
+		<?php if ( has_post_thumbnail() ) { ?>
+			<a href="<?php the_permalink(); ?>"><?php sup_post_image('1'); ?></a>
+		<?php } else { ?>
+			<?php echo '<a href="<?php the_permalink(); ?>"><img src="' . plugins_url( '/img/nopreview.png', __FILE__ ) . '" alt="no preview"/></a>'; ?>
+		<?php } ?>
  			    <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			  </li> 
 
@@ -170,7 +196,12 @@ function sup_random_posts() {
 		query_posts('posts_per_page=5&orderby=rand');
 			if (have_posts()) :
  		while (have_posts()) : the_post(); ?>
-			  <li style="width:49%"><?php sup_post_image('1'); ?>
+			  <li style="width:49%">
+		<?php if ( has_post_thumbnail() ) { ?>
+			<a href="<?php the_permalink(); ?>"><?php sup_post_image('1'); ?></a>
+		<?php } else { ?>
+			<?php echo '<a href="<?php the_permalink(); ?>"><img src="' . plugins_url( '/img/nopreview.png', __FILE__ ) . '" alt="no preview"/></a>'; ?>
+		<?php } ?>
  			    <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			  </li> 
 

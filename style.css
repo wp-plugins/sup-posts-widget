@@ -1,3 +1,15 @@
+/*
+Plugin Name: Sup Posts Widget
+Plugin URI: http://uspdev.net/sup-post-widget-wordpress-plugin/
+Description: Is a plugin where you can display the number of <strong>popular posts, latest and random post</strong> with thumbnail image on your sidebar or page/post. This plugin support for 3rdparty source image. 
+Version: 1.7
+Author: Uspdev
+Author URI: http://uspdev.net
+License: GPLv2 or later
+*/
+
+
+
 /* Style for Sup Posts Widget 
 ========================================== */
 div.spw_widget div.spw_content {
@@ -63,7 +75,7 @@ div.TabView div.spw_tabs a.Active {background: #FFF;}
 }
 
 #to_wrapper {
-	width: 785px;
+	width: 100%;
 	background: url(wrapper.gif) repeat-y 0 0;
 }
 	#to_wrapper .b1 { background: url(header.gif) no-repeat 0 0; }
@@ -154,3 +166,120 @@ div.TabView div.spw_tabs a.Active {background: #FFF;}
 		position: absolute;
 		top: 10px; left: 650px;
 	}
+
+
+
+/* Admin Setting Style
+========================================================= */
+#reminder {
+	clear: both;
+	display: none;
+	font-weight: bold;
+	font-size: 0.9em;
+	color: #ff0000;
+	padding-top: 10px;
+	width: 340px;
+}
+
+
+.spw-admin-head {
+	height: 65px;
+}
+
+.spw-admin-head h2 {
+		padding: 18px 0 0 0;
+		color: #464646;
+		font-family: "Arial";
+		font-weight: normal;
+		font-size: 23px;
+		text-shadow: 0 1px 0 #FFFFFF;
+	}
+
+
+#spw-content {
+	width: 650px;
+	float: left;
+	padding:0;
+	margin:0;
+}
+
+#spw-content h3 {
+	padding:8px 10px;
+	margin: 0;
+}
+
+.postbox .inside {
+	margin: 0;
+	padding: 5px 15px;
+	position: relative;
+}
+ 
+
+.inside p  {
+	width:100%;
+	float: left;
+}
+.inside p label {
+	width: 200px;
+	float: left;
+	font-size: 13px;
+}
+
+.inside p input {
+	width: 200px;
+	float: left;
+	font-size: 13px;
+	padding: 6px 7px;
+}
+.inside p textarea {
+	width: 350px;
+	height:85px;
+	float: left;
+	font-size: 13px;
+	padding: 6px 7px;
+}
+.spw-sidebar {
+float: left;
+width: 350px;
+margin: 0 0 0 25px;
+padding: 15px;
+border: 1px solid #ccc;
+background: #eaeaea;
+}
+.spw-widget {
+margin: 0 0 20px 0;
+padding: 10px;
+background: #fafafa;
+border: 1px solid #ccc;
+}
+.spw-widget h2{
+font-size: 14px;
+padding: 0 0 5px 0;
+margin: 0;
+border-bottom: 1px solid #ccc;
+}
+#spw-footer {
+	clear: both;
+	height: 47px;
+	position: relative;
+}
+	#save {
+		width: 122px; height: 25px;
+		text-indent: -9999px;
+		outline: none;
+		border: 0;
+		background: url(save.gif) no-repeat 0 0;
+		border-radius: 0;
+		position: absolute;
+		top: 10px; left: 650px;
+	}
+
+.spw_link {
+	font-size: 10px;
+	float: right;
+	clear: both;
+	text-decoration: none;
+}
+.spw_link a{text-decoration: none;}
+
+/* Responsive Design */
