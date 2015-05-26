@@ -2,8 +2,7 @@
 /**
  * @package Sup Post Widget
  */
-
-
+ 
 class sup_posts_sidebar_widget extends WP_Widget {
 
 	function __construct() {

@@ -1,21 +1,66 @@
 <?php
 function spw_prx($key) {
-	global $settings, $shortname;
-	return $settings[$shortname . '_' . $key];
+	global $spwsettings, $shortname;
+	return $spwsettings[$shortname . '_' . $key];
 }
 
 $pluginname = "Sup Posts Widget";
-$shortname = "SPW";
+$shortname = "spw";
 
 $spwsettings = array();
 $spwoptions = array (
 	/** BEGIN General Form Settings **/
 	array(
-		"name"=>"General Form Settings",
+		"name"=>"General Widget Settings",
 		"id"=>$shortname."_general_settings",
 		"type"=>"open",
 		),
-
+	array(
+		"name"=>"Post to Display",
+		"id"=>$shortname."_post_to_display",
+		"std"=>"5",
+		"type"=>"text",
+		"note"=>"How Many post to display on widget"
+		),
+	array(
+		"name"=>"Show Thumbnail",
+		"id"=>$shortname."_show_thumbnail",
+		"std"=>"yes",
+		"type"=>"select",
+		"spwoptions"=>array('yes','no'),
+		"note"=>"How Many post to display on widget"
+		),
+	array(
+		"name"=>"Show Post Date",
+		"id"=>$shortname."_show_post_date",
+		"std"=>"yes",
+		"type"=>"select",
+		"spwoptions"=>array('yes','no'),
+		"note"=>"Date of your post"
+		),
+	array(
+		"name"=>"Show Comment Count",
+		"id"=>$shortname."_show_comment_count",
+		"std"=>"yes",
+		"type"=>"select",
+		"spwoptions"=>array('yes','no'),
+		"note"=>"Show Number of Comment on Your posts"
+		),		
+	array(
+		"name"=>"Author Link",
+		"id"=>$shortname."_spw_link",
+		"std"=>"yes",
+		"type"=>"select",
+		"spwoptions"=>array('yes','none'),
+		"note"=>"This will showing link to plugin author"
+		),
+	array(
+		"name"=>"Custom Css",
+		"id"=>$shortname."_custom_css",
+		"std"=>"Custom Css will work in the next Version...",
+		"type"=>"textarea",
+		"note"=>"This Feature will work in the next Version!"
+		),
 	array("type"=>"close"),
 	/** END General Settings **/
 
@@ -66,13 +111,50 @@ function spw_admin() {
 		<div class="postbox">
  		<h3><?php echo $value['name']; ?></h3>
 	   	<div class="inside">
- 		<strong>This Options will be available in the next versions of this plugin. thanks</stong>
+			<?php } elseif ($value['type'] == "text") { ?>
+				<p>
+					<label<?php if ($first) { $first=false; echo ' '; } ?>><?php echo $value['name']; ?>
+						<br/><small>
+						<?php echo $value['note']; ?>
+						</small>
+					</label>
+					<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings($value['id']); } else { echo $value['std']; } ?>" />
+				</p>
+			<?php } elseif ($value['type'] == "select") { ?>
+				<p>
+					<label<?php if ($first) { $first=false; echo ' '; } ?>><?php echo $value['name']; ?>
+						<br/><small>
+						<?php echo $value['note']; ?>
+						</small>
+					</label>
+					<select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
+					<?php foreach ($value['spwoptions'] as $option) { ?>
+						<option value="<?php echo $option; ?>" <?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option>
+					<?php } ?>
+					</select>
+				</p>
+			<?php } elseif ($value['type'] == "textarea") { ?>
+				<p>
+					<label<?php if ($first) { $first=false; echo ' '; } ?>><?php echo $value['name']; ?>
+						<br/><small>
+						<?php echo $value['note']; ?>
+						</small>
+					</label>
+					<textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php if ( get_settings( $value['id'] ) != "") { echo htmlentities(stripslashes(get_settings( $value['id'] ))); } else { echo stripslashes($value['std']); } ?></textarea>
+				</p>
+			<?php 
+			} elseif ($value['type']=='close') { ?>				
 		<div style="clear:both"></div>	
  		</div> <!-- End inside -->
 	</div> <!-- End postbox -->				 
 			<?php }
 		}
 		?>
+		<p>
+		<input  class="button-primary" name="save" type="submit" value="Save changes" />    
+		<input type="hidden" name="action" value="save" />
+		</p>	
+		
 	</div>
 	<!-- END content -->
 		<!-- Begin Sidebar -->
@@ -81,11 +163,17 @@ function spw_admin() {
 		<div class="spw-widget">
 		<h2>How to</h2>
 		<p>
-			<br/>
-		
-			<br/>
 			<b><a href="http://uspdev.net/projects/sup-post-widget-wordpress-plugin/">Please visit this page for instructions</a></b>
 		</p>
+		<h2>Your Website Value</h2>
+		<?php
+			//Get rid of wwww
+			$domain_name =  preg_replace('/^www\./','',$_SERVER['SERVER_NAME']);
+			//output the result
+		?>
+
+		<script type="text/javascript" src="http://seostats123.com/widget.php?type=stats&domain=<?php echo $domain_name; ?>"></script>
+<p><img src="http://www.google.com/s2/favicons?domain_url=http://<?php echo $domain_name; ?>" /> <a href="http://seostats123.com/process.php?q=<?php echo $domain_name; ?>&t=auto" target="_blank"><span style="color:red;font-weight:bold">Click here</span></a> to analize your Domain</p>
 		</div>
 
 		<div class="spw-widget">
@@ -112,11 +200,8 @@ function spw_admin() {
 		</div>
 	</div>
 	<!-- END Sidebar -->
-	<div id="spw-footer" style="clear:both">
-		<p>
-		<input  class="button-primary" name="save" type="submit" value="Save changes" />    
-		<input type="hidden" name="action" value="save" />
-		</p>
+	<div id="spw-footer" >
+
 	</div>
 	
 	 </div>

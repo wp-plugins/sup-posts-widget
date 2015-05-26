@@ -27,6 +27,8 @@ Is a plugin where you can display the number of popular posts, latest and random
 3. Go to the Appearance -> Widgets ->  Choose a "Posts Widget" and drag it to the sidebar where you wish it to appear.
 4. You are done.
 
+More info about this plugin >> <a href="http://uspdev.net/sup-post-widget-wordpress-plugin/7">SPW Plugin</a>
+
 == Frequently Asked Questions ==
 
 Q : How can I add a list of posts widget to my sidebar?
@@ -62,11 +64,20 @@ A : You can use the short code to add a list popular, random or latest post to t
 * Added new style
 
 = 1.4 =
-
-= 1.5 =
-
-= 1.6 =
-
-= 1.7 =
 * Added post widgets options
 * Default image if no thumbnail
+
+= 1.5 =
+* NA
+
+= 1.6 =
+* NA
+
+= 1.7 =
+* NA
+
+= 1.8 =
+* Fixed bug error for not found links
+* New options feature
+* Post Comments count 
+* Post date 
